@@ -1,3 +1,7 @@
+body {
+    background-color: #ececec;
+}
+
 body h1 {
     text-align: center;
     font-family: arial;
@@ -20,6 +24,7 @@ body ul li {
     flex-direction: column;
     margin-bottom: 20px;
     align-items: center;
+    margin: 0px auto;
 }
 
 body ul li span {
@@ -29,13 +34,30 @@ body ul li span {
     text-align: center;
 }
 
+ul li div h6 {
+    margin: 0px;
+    border: 0px;
+    font-family: arial;
+    font-size: 10px;
+    color: #363636;
+    text-align: left;
+}
+
+ul li div p {
+    margin: 0px;
+    font-family: arial;
+    font-size: 10px;
+    color: #363636;
+    text-align: left;
+}
+
 #Bulbasaur {
     background-color: #039e3e;
     border: 4px solid #13381f;
 }
 
 #Charmander {
-    background-color: #c43e00;
+    background-color: #c45725;
     border: 4px solid #860000;
 }
 
@@ -63,3 +85,4 @@ body ul li span {
     background-color: #c097ee;
     border: 4px solid #550086;
 }
+
