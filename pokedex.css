@@ -93,3 +93,7 @@ body ul li p {
     background-color: #c097ee;
     border: 4px solid #550086;
 }
+
+form {
+    padding: 3px;
+}
