@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="description" content="A pokedex of the first 20 pokemon. Has the ability to serch by name or number.">
+        <meta name="author" content="Mitchell Zehr">
         <title>Pokèdex - mzehr4</title>
         <link href="pokedex.css" rel="stylesheet" type="text/css">    
     </head>
     <body>
         <h1>Mitchell's Pokèdex</h1>
-        <form>
-            <input type="text" name="pokeNameSearchBox" placeholder="Pokemon Name" maxlength="20">
-            <input type="submit" name="pokeNameSearchBox" value="Search">
+        <script type="text/javascript" src="pokedex.js"></script>
+        <form class="search">
+            <input type="text" id="pokeNameSearchBox" name="pokeNameSearchBox" placeholder="Pokemon Name" maxlength="20" onkeyup="typeSearch()">
+            <input type="submit" name="pokeNameSearchBox" value="Search" onclick="searchName()">
         </form>
-        <form>
-            <input type="number" name="pokeNumSearchBox" placeholder="Pokemon Number">
-            <input type="submit" name="pokeNumSearchBox" value="Search">
+        <form class="search">
+            <input type="text" id="pokeNumSearchBox" name="pokeNumSearchBox" placeholder="Pokemon Number">
+            <input type="submit" name="pokeNumSearchBox" value="Search" onclick="searchNum()">
         </form>
-        <ul>
+        <ul id="pokeList">
             <li id="Bulbasaur">
                 <img src="pokemon/1.png">
                 <div class="pokeInfo">
