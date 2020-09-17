@@ -99,6 +99,18 @@ form {
 }
 
 .search {
-    padding: 10px;
+    padding: 5px;
+    padding-left: 10px;
     background-color: #860000;
+}
+
+#Sources {
+    margin: 0px;
+    padding: 5px;
+    border: 0px;
+    font-family: arial;
+    font-size: 16px;
+    color: #363636;
+    text-align: left;
+    display: inline;
 }
