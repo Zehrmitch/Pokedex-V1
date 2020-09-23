@@ -12,12 +12,12 @@
         <script type="text/javascript" src="pokedex.js"></script>
         <div class="search"> 
             <form>
-                <input type="text" id="pokeNameSearchBox" name="pokeNameSearchBox" placeholder="Pokemon Name" maxlength="20" onkeyup="nameTypeSearch()">
-                <input type="submit" name="pokeNameSearchBox" value="Search" onclick="searchName()">
+                <input type="text" id="searchBarName" name="searchBarName" placeholder="Pokemon Name" maxlength="20" onkeyup="nameSearch()">
+                <input type="submit" name="pokeNameSearchButton" value="Search" onclick="searchName()">
             </form>
             <form>
-                <input type="text" id="pokeNumSearchBox" name="pokeNumSearchBox" placeholder="Pokemon Number" onkeyup="numTypeSearch()">
-                <input type="submit" name="pokeNumSearchBox" value="Search" onclick="searchNum()">
+                <input type="text" id="searchBarNum" name="searchBarNum" placeholder="Pokemon Number" onkeyup="numSearch()">
+                <input type="submit" name="pokeNumSearchButton" value="Search" onclick="searchNum()">
             </form>
         </div>
         <ul id="pokeList">
@@ -44,15 +44,6 @@
                 <div class="pokeInfo">
                     <h6>#003</h6>
                     <span>Venusaur</span>
-                    <p>ATK: 198 || DEF: 198 </p>
-                    <p>Type: Grass/Poison</p>
-                </div>
-            </li>
-            <li id="Bulbasaur">
-                <img src="pokemon/3-mega.png">
-                <div class="pokeInfo">
-                    <h6>#003</h6>
-                    <span>Venusaur Mega</span>
                     <p>ATK: 198 || DEF: 198 </p>
                     <p>Type: Grass/Poison</p>
                 </div>
@@ -84,24 +75,6 @@
                     <p>Type: Fire/Flying</p>
                 </div>
             </li>
-            <li id="Charmander">
-                <img src="pokemon/6-mega-x.png">
-                <div class="pokeInfo">
-                    <h6>#006</h6>
-                    <span>Charizard Mega X</span>
-                    <p>ATK: 223 || DEF: 176 </p>
-                    <p>Type: Fire/Flying</p>
-                </div>
-            </li>
-            <li id="Charmander">
-                <img src="pokemon/6-mega-y.png">
-                <div class="pokeInfo">
-                    <h6>#006</h6>
-                    <span>Charizard Mega Y</span>
-                    <p>ATK: 223 || DEF: 176 </p>
-                    <p>Type: Fire/Flying</p>
-                </div>
-            </li>
             <li id="Squirtle">
                 <img src="pokemon/7.png">
                 <div class="pokeInfo">
@@ -125,15 +98,6 @@
                 <div class="pokeInfo">
                     <h6>#009</h6>
                     <span>Blastoise</span>
-                    <p>ATK: 171 || DEF: 210 </p>
-                    <p>Type: Water</p>
-                </div>
-            </li>
-            <li id="Squirtle">
-                <img src="pokemon/9-mega.png">
-                <div class="pokeInfo">
-                    <h6>#009</h6>
-                    <span>Blastoise Mega</span>
                     <p>ATK: 171 || DEF: 210 </p>
                     <p>Type: Water</p>
                 </div>
@@ -192,15 +156,6 @@
                     <p>Type: Bug/Poision</p>
                 </div>
             </li>
-            <li id="Weedle">
-                <img src="pokemon/15-mega.png">
-                <div class="pokeInfo">
-                    <h6>#015</h6>
-                    <span>Beedrill Mega</span>
-                    <p>ATK: 169 || DEF: 150 </p>
-                    <p>Type: Bug/Poision</p>
-                </div>
-            </li>
             <li id="Pidgey">
                 <img src="pokemon/16.png">
                 <div class="pokeInfo">
@@ -224,15 +179,6 @@
                 <div class="pokeInfo">
                     <h6>#018</h6>
                     <span>Pidgeot</span>
-                    <p>ATK: 166 || DEF: 157 </p>
-                    <p>Type: Normal/Flying</p>
-                </div>
-            </li>
-            <li id="Pidgey">
-                <img src="pokemon/18-mega.png">
-                <div class="pokeInfo">
-                    <h6>#018</h6>
-                    <span>Pidgeot Mega</span>
                     <p>ATK: 166 || DEF: 157 </p>
                     <p>Type: Normal/Flying</p>
                 </div>
