@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <!-- Header including title and ref to css sheet -->
     <head>
         <meta charset="utf-8">
         <meta name="description" content="A pokedex of the first 20 pokemon. Has the ability to serch by name or number.">
@@ -10,6 +11,7 @@
     <body>
         <h1>Mitchell's Pokèdex</h1>
         <script type="text/javascript" src="pokedex.js"></script>
+        <!-- Search -->
         <div class="search"> 
             <form>
                 <input type="text" id="searchBarName" name="searchBarName" placeholder="Pokemon Name" maxlength="20" onkeyup="nameSearch()">
@@ -20,6 +22,7 @@
                 <input type="submit" name="pokeNumSearchButton" value="Search" onclick="searchNum()">
             </form>
         </div>
+        <!-- Pokemon List -->
         <ul id="pokeList">
             <li id="Bulbasaur">
                 <img src="pokemon/1.png">
@@ -203,6 +206,7 @@
             </li>
         </ul>
     </body>
+    <!-- Sources List -->
     <footer>
         <ul>
             <li id="Sources">
