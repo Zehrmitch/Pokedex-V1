@@ -59,37 +59,37 @@ body ul li p {
     z-index: 99;
 }
 
-#Bulbasaur {
+.Bulbasaur {
     background-color: #039e3e;
     border: 4px solid #13381f;
 }
 
-#Charmander {
+.Charmander {
     background-color: #c45725;
     border: 4px solid #860000;
 }
 
-#Squirtle {
+.Squirtle {
     background-color: #00adc4;
     border: 4px solid #002f86;
 }
 
-#Caterpie {
+.Caterpie {
     background-color: #00c452;
     border: 4px solid #108600;
 }
 
-#Weedle {
+.Weedle {
     background-color: #c1c400;
     border: 4px solid #747200;
 }
 
-#Pidgey {
+.Pidgey {
     background-color: #968a54;
     border: 4px solid #4d411b;
 }
 
-#Rattata {
+.Rattata {
     background-color: #c097ee;
     border: 4px solid #550086;
 }
