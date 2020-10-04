@@ -1,227 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Header including title and ref to css sheet -->
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="A pokedex of the first 20 pokemon. Has the ability to serch by name or number.">
-        <meta name="author" content="Mitchell Zehr">
-        <title>Pokèdex - mzehr4</title>
-        <link href="pokedex.css" rel="stylesheet" type="text/css">    
-    </head>
-    <body>
-        <h1>Mitchell's Pokèdex</h1>
-        <script type="text/javascript" src="pokedex.js"></script>
-        <!-- Search -->
-        <div class="search"> 
-            <form>
-                <input type="text" id="searchBarName" name="searchBarName" placeholder="Pokemon Name" maxlength="20" onkeyup="listNameSearch()">
-                <input type="submit" name="pokeNameSearchButton" value="Search"  onclick="searchName()">
-            </form>
-            <form>
-                <input type="text" id="searchBarNum" name="searchBarNum" placeholder="Pokemon Number" onkeyup="listNumSearch()">
-                <input type="submit" name="pokeNumSearchButton" value="Search" onclick="searchNum()">
-            </form>
-        </div>
-        <div id="searchSection">
-            <p> Search Results: </p>
-            <ul id="searchList">
-                
-            </ul>
-        </div>
-        <!-- Pokemon List -->
-        <ul id="pokeList">
-            <li class="Bulbasaur" id="Bulbasaur">
-                <div class="pokeInfo">
-                    <img src="pokemon/1.png" alt="Pokemon Image">
-                    <h6>#001</h6>
-                    <span>Bulbasaur</span>
-                    <p>ATK: 118 || DEF: 118 </p>
-                    <p>Type: Grass/Poison</p>
-                </div>
-            </li>
-            <li class="Bulbasaur" id="Ivysaur">
-                <div class="pokeInfo">
-                    <img src="pokemon/2.png" alt="Pokemon Image">
-                    <h6>#002</h6>
-                    <span>Ivysaur</span>
-                    <p>ATK: 151 || DEF: 151 </p>
-                    <p>Type: Grass/Poison</p>
-                </div>
-            </li>
-            <li class="Bulbasaur" id="Venusaur">
-                <div class="pokeInfo">
-                    <img src="pokemon/3.png" alt="Pokemon Image">
-                    <h6>#003</h6>
-                    <span>Venusaur</span>
-                    <p>ATK: 198 || DEF: 198 </p>
-                    <p>Type: Grass/Poison</p>
-                </div>
-            </li>
-            <li class="Charmander" id="Charmander">
-                <div class="pokeInfo">
-                    <img src="pokemon/4.png" alt="Pokemon Image">
-                    <h6>#004</h6>
-                    <span>Charmander</span>
-                    <p>ATK: 116 || DEF: 96 </p>
-                    <p>Type: Fire</p>
-                </div>
-            </li>
-            <li class="Charmander" id="Charmeleon">
-                <div class="pokeInfo">
-                    <img src="pokemon/5.png" alt="Pokemon Image">
-                    <h6>#005</h6>
-                    <span>Charmeleon</span>
-                    <p>ATK: 158 || DEF: 129 </p>
-                    <p>Type: Fire</p>
-                </div>
-            </li>
-            <li class="Charmander" id="Charizard">
-                <div class="pokeInfo">
-                    <img src="pokemon/6.png" alt="Pokemon Image">
-                    <h6>#006</h6>
-                    <span>Charizard</span>
-                    <p>ATK: 223 || DEF: 176 </p>
-                    <p>Type: Fire/Flying</p>
-                </div>
-            </li>
-            <li class="Squirtle" id="Squirtle">
-                <div class="pokeInfo">
-                    <img src="pokemon/7.png" alt="Pokemon Image">
-                    <h6>#007</h6>
-                    <span>Squirtle</span>
-                    <p>ATK: 94 || DEF: 122 </p>
-                    <p>Type: Water</p>
-                </div>
-            </li>
-            <li class="Squirtle" id="Wartortle">
-                <div class="pokeInfo">
-                    <img src="pokemon/8.png" alt="Pokemon Image">
-                    <h6>#008</h6>
-                    <span>Wartortle</span>
-                    <p>ATK: 126 || DEF: 155 </p>
-                    <p>Type: Water</p>
-                </div>
-            </li>
-            <li class="Squirtle" id="Blastoise">
-                <div class="pokeInfo">
-                    <img src="pokemon/9.png" alt="Pokemon Image">
-                    <h6>#009</h6>
-                    <span>Blastoise</span>
-                    <p>ATK: 171 || DEF: 210 </p>
-                    <p>Type: Water</p>
-                </div>
-            </li>
-            <li class="Caterpie" id="Caterpie">
-                <div class="pokeInfo">
-                    <img src="pokemon/10.png" alt="Pokemon Image">
-                    <h6>#010</h6>
-                    <span>Caterpie</span>
-                    <p>ATK: 55 || DEF: 62 </p>
-                    <p>Type: Bug</p>
-                </div>
-            </li>
-            <li class="Caterpie" id="Metapod">
-                <div class="pokeInfo">
-                    <img src="pokemon/11.png" alt="Pokemon Image">
-                    <h6>#011</h6>
-                    <span>Metapod</span>
-                    <p>ATK: 45 || DEF: 94 </p>
-                    <p>Type: Bug</p>
-                </div>
-            </li>
-            <li class="Caterpie" id="Butterfree">
-                <div class="pokeInfo">
-                    <img src="pokemon/12.png" alt="Pokemon Image">
-                    <h6>#012</h6>
-                    <span>Butterfree</span>
-                    <p>ATK: 167 || DEF: 151 </p>
-                    <p>Type: Bug/Flying</p>
-                </div>
-            </li>
-            <li class="Weedle" id="Weedle">
-                <div class="pokeInfo">
-                    <img src="pokemon/13.png" alt="Pokemon Image">
-                    <h6>#013</h6>
-                    <span>Weedle</span>
-                    <p>ATK: 63 || DEF: 55 </p>
-                    <p>Type: Bug/Poision</p>
-                </div>
-            </li>
-            <li class="Weedle" id="Kakuna">
-                <div class="pokeInfo">
-                    <img src="pokemon/14.png" alt="Pokemon Image">
-                    <h6>#014</h6>
-                    <span>Kakuna</span>
-                    <p>ATK: 46 || DEF: 86 </p>
-                    <p>Type: Bug/Poision</p>
-                </div>
-            </li>
-            <li class="Weedle" id="Beedrill">
-                <div class="pokeInfo">
-                    <img src="pokemon/15.png" alt="Pokemon Image">
-                    <h6>#015</h6>
-                    <span>Beedrill</span>
-                    <p>ATK: 169 || DEF: 150 </p>
-                    <p>Type: Bug/Poision</p>
-                </div>
-            </li>
-            <li class="Pidgey" id="Pidgey">
-                <div class="pokeInfo">
-                    <img src="pokemon/16.png" alt="Pokemon Image">
-                    <h6>#016</h6>
-                    <span>Pidgey</span>
-                    <p>ATK: 85 || DEF: 76 </p>
-                    <p>Type: Normal/Flying</p>
-                </div>
-            </li>
-            <li class="Pidgey" id="Pidgeotto">
-                <div class="pokeInfo">
-                    <img src="pokemon/17.png" alt="Pokemon Image">
-                    <h6>#017</h6>
-                    <span>Pidgeotto</span>
-                    <p>ATK: 117 || DEF: 108 </p>
-                    <p>Type: Normal/Flying</p>
-                </div>
-            </li>
-            <li class="Pidgey" id="Pidgeot">
-                <div class="pokeInfo">
-                    <img src="pokemon/18.png" alt="Pokemon Image">
-                    <h6>#018</h6>
-                    <span>Pidgeot</span>
-                    <p>ATK: 166 || DEF: 157 </p>
-                    <p>Type: Normal/Flying</p>
-                </div>
-            </li>
-            <li class="Rattata" id="Rattata">
-                <div class="pokeInfo">
-                    <img src="pokemon/19.png" alt="Pokemon Image">
-                    <h6>#019</h6>
-                    <span>Rattata</span>
-                    <p>ATK: 103 || DEF: 70 </p>
-                    <p>Type: Normal</p>
-                </div>
-            </li>
-            <li class="Rattata" id="Raticate">
-                <div class="pokeInfo">
-                    <img src="pokemon/20.png" alt="Pokemon Image">
-                    <h6>#020</h6>
-                    <span>Raticate</span>
-                    <p>ATK: 161 || DEF: 144 </p>
-                    <p>Type: Normal</p>
-                </div>
-            </li>
-        </ul>
-        <!-- Sources List -->
-        <footer>
-            <ul>
-                <li id="Sources">
-                    Sources:
-                    https://www.pokemon.com/us/pokedex/
-                    https://www.w3schools.com/html/html_formatting.asp
-                    https://www.w3schools.com/css/default.asp
-                    https://www.w3schools.com/howto/howto_js_filter_lists.asp
-                </li>
-            </ul>
-        </footer>
-    </body>
+	<!-- Header including title and ref to css sheet -->
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="description"
+			content="A pokedex of the first 20 pokemon. Has the ability to serch by name or number."
+		/>
+		<meta name="author" content="Mitchell Zehr" />
+		<title>Pokèdex - mzehr4</title>
+		<link href="pokedex.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1>Mitchell's Pokèdex</h1>
+		<script type="text/javascript" src="pokedex.js"></script>
+		<!-- Search -->
+		<div class="search">
+			<form>
+				<input
+					type="text"
+					id="searchBarName"
+					name="searchBarName"
+					placeholder="Pokemon Name"
+					maxlength="20"
+					onkeyup="listNameSearch()"
+				/>
+				<input
+					type="submit"
+					name="pokeNameSearchButton"
+					value="Search"
+					onclick="searchName()"
+				/>
+			</form>
+			<form>
+				<input
+					type="text"
+					id="searchBarNum"
+					name="searchBarNum"
+					placeholder="Pokemon Number"
+					onkeyup="listNumSearch()"
+				/>
+				<input
+					type="submit"
+					name="pokeNumSearchButton"
+					value="Search"
+					onclick="searchNum()"
+				/>
+			</form>
+		</div>
+		<div id="searchSection">
+			<p>Search Results:</p>
+			<ul id="searchList"></ul>
+		</div>
+		<!-- Pokemon List -->
+		<ul id="pokeList">
+			<li class="Bulbasaur" id="Bulbasaur">
+				<div class="pokeInfo">
+					<img src="pokemon/1.png" alt="Pokemon Image" />
+					<h6>#001</h6>
+					<span>Bulbasaur</span>
+					<p>ATK: 118 || DEF: 118</p>
+					<p>Type: Grass/Poison</p>
+				</div>
+			</li>
+			<li class="Bulbasaur" id="Ivysaur">
+				<div class="pokeInfo">
+					<img src="pokemon/2.png" alt="Pokemon Image" />
+					<h6>#002</h6>
+					<span>Ivysaur</span>
+					<p>ATK: 151 || DEF: 151</p>
+					<p>Type: Grass/Poison</p>
+				</div>
+			</li>
+			<li class="Bulbasaur" id="Venusaur">
+				<div class="pokeInfo">
+					<img src="pokemon/3.png" alt="Pokemon Image" />
+					<h6>#003</h6>
+					<span>Venusaur</span>
+					<p>ATK: 198 || DEF: 198</p>
+					<p>Type: Grass/Poison</p>
+				</div>
+			</li>
+			<li class="Charmander" id="Charmander">
+				<div class="pokeInfo">
+					<img src="pokemon/4.png" alt="Pokemon Image" />
+					<h6>#004</h6>
+					<span>Charmander</span>
+					<p>ATK: 116 || DEF: 96</p>
+					<p>Type: Fire</p>
+				</div>
+			</li>
+			<li class="Charmander" id="Charmeleon">
+				<div class="pokeInfo">
+					<img src="pokemon/5.png" alt="Pokemon Image" />
+					<h6>#005</h6>
+					<span>Charmeleon</span>
+					<p>ATK: 158 || DEF: 129</p>
+					<p>Type: Fire</p>
+				</div>
+			</li>
+			<li class="Charmander" id="Charizard">
+				<div class="pokeInfo">
+					<img src="pokemon/6.png" alt="Pokemon Image" />
+					<h6>#006</h6>
+					<span>Charizard</span>
+					<p>ATK: 223 || DEF: 176</p>
+					<p>Type: Fire/Flying</p>
+				</div>
+			</li>
+			<li class="Squirtle" id="Squirtle">
+				<div class="pokeInfo">
+					<img src="pokemon/7.png" alt="Pokemon Image" />
+					<h6>#007</h6>
+					<span>Squirtle</span>
+					<p>ATK: 94 || DEF: 122</p>
+					<p>Type: Water</p>
+				</div>
+			</li>
+			<li class="Squirtle" id="Wartortle">
+				<div class="pokeInfo">
+					<img src="pokemon/8.png" alt="Pokemon Image" />
+					<h6>#008</h6>
+					<span>Wartortle</span>
+					<p>ATK: 126 || DEF: 155</p>
+					<p>Type: Water</p>
+				</div>
+			</li>
+			<li class="Squirtle" id="Blastoise">
+				<div class="pokeInfo">
+					<img src="pokemon/9.png" alt="Pokemon Image" />
+					<h6>#009</h6>
+					<span>Blastoise</span>
+					<p>ATK: 171 || DEF: 210</p>
+					<p>Type: Water</p>
+				</div>
+			</li>
+			<li class="Caterpie" id="Caterpie">
+				<div class="pokeInfo">
+					<img src="pokemon/10.png" alt="Pokemon Image" />
+					<h6>#010</h6>
+					<span>Caterpie</span>
+					<p>ATK: 55 || DEF: 62</p>
+					<p>Type: Bug</p>
+				</div>
+			</li>
+			<li class="Caterpie" id="Metapod">
+				<div class="pokeInfo">
+					<img src="pokemon/11.png" alt="Pokemon Image" />
+					<h6>#011</h6>
+					<span>Metapod</span>
+					<p>ATK: 45 || DEF: 94</p>
+					<p>Type: Bug</p>
+				</div>
+			</li>
+			<li class="Caterpie" id="Butterfree">
+				<div class="pokeInfo">
+					<img src="pokemon/12.png" alt="Pokemon Image" />
+					<h6>#012</h6>
+					<span>Butterfree</span>
+					<p>ATK: 167 || DEF: 151</p>
+					<p>Type: Bug/Flying</p>
+				</div>
+			</li>
+			<li class="Weedle" id="Weedle">
+				<div class="pokeInfo">
+					<img src="pokemon/13.png" alt="Pokemon Image" />
+					<h6>#013</h6>
+					<span>Weedle</span>
+					<p>ATK: 63 || DEF: 55</p>
+					<p>Type: Bug/Poision</p>
+				</div>
+			</li>
+			<li class="Weedle" id="Kakuna">
+				<div class="pokeInfo">
+					<img src="pokemon/14.png" alt="Pokemon Image" />
+					<h6>#014</h6>
+					<span>Kakuna</span>
+					<p>ATK: 46 || DEF: 86</p>
+					<p>Type: Bug/Poision</p>
+				</div>
+			</li>
+			<li class="Weedle" id="Beedrill">
+				<div class="pokeInfo">
+					<img src="pokemon/15.png" alt="Pokemon Image" />
+					<h6>#015</h6>
+					<span>Beedrill</span>
+					<p>ATK: 169 || DEF: 150</p>
+					<p>Type: Bug/Poision</p>
+				</div>
+			</li>
+			<li class="Pidgey" id="Pidgey">
+				<div class="pokeInfo">
+					<img src="pokemon/16.png" alt="Pokemon Image" />
+					<h6>#016</h6>
+					<span>Pidgey</span>
+					<p>ATK: 85 || DEF: 76</p>
+					<p>Type: Normal/Flying</p>
+				</div>
+			</li>
+			<li class="Pidgey" id="Pidgeotto">
+				<div class="pokeInfo">
+					<img src="pokemon/17.png" alt="Pokemon Image" />
+					<h6>#017</h6>
+					<span>Pidgeotto</span>
+					<p>ATK: 117 || DEF: 108</p>
+					<p>Type: Normal/Flying</p>
+				</div>
+			</li>
+			<li class="Pidgey" id="Pidgeot">
+				<div class="pokeInfo">
+					<img src="pokemon/18.png" alt="Pokemon Image" />
+					<h6>#018</h6>
+					<span>Pidgeot</span>
+					<p>ATK: 166 || DEF: 157</p>
+					<p>Type: Normal/Flying</p>
+				</div>
+			</li>
+			<li class="Rattata" id="Rattata">
+				<div class="pokeInfo">
+					<img src="pokemon/19.png" alt="Pokemon Image" />
+					<h6>#019</h6>
+					<span>Rattata</span>
+					<p>ATK: 103 || DEF: 70</p>
+					<p>Type: Normal</p>
+				</div>
+			</li>
+			<li class="Rattata" id="Raticate">
+				<div class="pokeInfo">
+					<img src="pokemon/20.png" alt="Pokemon Image" />
+					<h6>#020</h6>
+					<span>Raticate</span>
+					<p>ATK: 161 || DEF: 144</p>
+					<p>Type: Normal</p>
+				</div>
+			</li>
+		</ul>
+		<!-- Sources List -->
+		<footer>
+			<ul>
+				<li id="Sources">
+					Sources: https://www.pokemon.com/us/pokedex/
+					https://www.w3schools.com/html/html_formatting.asp
+					https://www.w3schools.com/css/default.asp
+					https://www.w3schools.com/howto/howto_js_filter_lists.asp
+				</li>
+			</ul>
+		</footer>
+	</body>
 </html>
