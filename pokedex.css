@@ -114,3 +114,15 @@ form {
     text-align: left;
     display: inline;
 }
+
+#searchSection {
+    background-color: rgb(63, 71, 80);
+}
+
+#searchSection p {
+    padding: 5px;
+    font-family: arial;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
