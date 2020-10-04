@@ -122,29 +122,6 @@ function searchName() {
 	}
 }
 
-//Filter pokemon list as the user types
-function nameSearch() {
-	//Set the varriables
-	var input, filter, ul, li, i, txtValue;
-	input = document.getElementById("searchBarName");
-	filter = input.value.toUpperCase();
-	ul = document.getElementById("pokeList");
-	li = ul.getElementsByTagName("li");
-
-	// Loop through all list items, and hide those who don't match the search query
-	for (i = 0; i < li.length; i++) {
-		var span = li[i].getElementsByTagName("span")[0];
-		//Get the values in the span tag
-		txtValue = span.textContent || span.innerText;
-		//Hide everything that doesnt match
-		if (txtValue.toUpperCase().indexOf(filter) > -1) {
-			li[i].style.display = "";
-		} else {
-			li[i].style.display = "none";
-		}
-	}
-}
-
 //Search function when the search button is clicked
 function searchNum() {
 	var searchedPokemonNum = document.getElementById("searchBarNum").value;
@@ -189,18 +166,68 @@ function numSearch() {
 	input = document.getElementById("searchBarNum");
 	filter = input.value;
 	ul = document.getElementById("pokeList");
-	li = ul.getElementsByTagName("li");
+    li = ul.getElementsByTagName("li");
+    liName = ul.getElementsByTagName("li");
+    let pokeMatch = [];
+
+    // Loop through all list items, and hide those who don't match the search query
+    const myNode = document.getElementById("searchList");
+    while (myNode.firstChild) {
+        myNode.removeChild(myNode.lastChild);
+    }
 
 	// Loop through all list items, and hide those who don't match the search query
 	for (i = 0; i < li.length; i++) {
-		var hVal = li[i].getElementsByTagName("h6")[0];
+        var hVal = li[i].getElementsByTagName("h6")[0];
+        var span = liName[i].getElementsByTagName("span")[0];
+        txtValue = span.textContent || span.innerText;
+
 		//Check if the value matches what is in the h6 tag
 		hValue = hVal.textContent || hVal.innerText;
 		//check for matches and hide if there is no match
 		if (hValue.indexOf(filter) > -1) {
-			li[i].style.display = "";
-		} else {
-			li[i].style.display = "none";
+			if (!(document.getElementById(txtValue + "_clone"))){
+                var itm = document.getElementById(txtValue);
+                // Copy the <li> element and its child nodes
+                var cln = itm.cloneNode(true);
+                cln.id = txtValue + "_clone";
+                // Append the cloned <li> element to <ul>
+                document.getElementById("searchList").appendChild(cln);
+            }
 		}
+    }
+}
+
+function listNameSearch() {
+	//Set the varriables
+	var input, filter, ul, li, i, txtValue;
+	input = document.getElementById("searchBarName");
+	filter = input.value.toUpperCase();
+	ul = document.getElementById("pokeList");
+    li = ul.getElementsByTagName("li");
+    let pokeMatch = [];
+
+    // Loop through all list items, and hide those who don't match the search query
+    const myNode = document.getElementById("searchList");
+    while (myNode.firstChild) {
+        myNode.removeChild(myNode.lastChild);
+    }
+
+	for (i = 0; i < li.length; i++) {
+		var span = li[i].getElementsByTagName("span")[0];
+		//Get the values in the span tag
+		txtValue = span.textContent || span.innerText;
+		//Hide everything that doesnt match
+		if (txtValue.toUpperCase().indexOf(filter) > -1) {
+
+            if (!(document.getElementById(txtValue + "_clone"))){
+                var itm = document.getElementById(txtValue);
+                // Copy the <li> element and its child nodes
+                var cln = itm.cloneNode(true);
+                cln.id = txtValue + "_clone";
+                // Append the cloned <li> element to <ul>
+                document.getElementById("searchList").appendChild(cln);
+            }
+        }
 	}
 }
