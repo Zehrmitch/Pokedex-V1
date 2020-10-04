@@ -170,22 +170,23 @@ function numSearch() {
     liName = ul.getElementsByTagName("li");
     let pokeMatch = [];
 
-    // Loop through all list items, and hide those who don't match the search query
+    // // Delete all of the current elements when the user types
     const myNode = document.getElementById("searchList");
     while (myNode.firstChild) {
         myNode.removeChild(myNode.lastChild);
     }
 
-	// Loop through all list items, and hide those who don't match the search query
 	for (i = 0; i < li.length; i++) {
+        // Set varriables
         var hVal = li[i].getElementsByTagName("h6")[0];
         var span = liName[i].getElementsByTagName("span")[0];
         txtValue = span.textContent || span.innerText;
 
 		//Check if the value matches what is in the h6 tag
-		hValue = hVal.textContent || hVal.innerText;
-		//check for matches and hide if there is no match
+        hValue = hVal.textContent || hVal.innerText;
+        // Check if an item matches
 		if (hValue.indexOf(filter) > -1) {
+            // Check the item doesnt already exist
 			if (!(document.getElementById(txtValue + "_clone"))){
                 var itm = document.getElementById(txtValue);
                 // Copy the <li> element and its child nodes
@@ -207,7 +208,7 @@ function listNameSearch() {
     li = ul.getElementsByTagName("li");
     let pokeMatch = [];
 
-    // Loop through all list items, and hide those who don't match the search query
+    // Delete all of the current elements when the user types
     const myNode = document.getElementById("searchList");
     while (myNode.firstChild) {
         myNode.removeChild(myNode.lastChild);
@@ -220,6 +221,7 @@ function listNameSearch() {
 		//Hide everything that doesnt match
 		if (txtValue.toUpperCase().indexOf(filter) > -1) {
 
+            // Check that the item ID doesnt already exist
             if (!(document.getElementById(txtValue + "_clone"))){
                 var itm = document.getElementById(txtValue);
                 // Copy the <li> element and its child nodes
