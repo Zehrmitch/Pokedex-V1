@@ -160,7 +160,7 @@ function searchNum() {
 	}
 }
 
-function numSearch() {
+function listNumSearch() {
 	//Setting the varriables
 	var input, filter, ul, li, i, hValue;
 	input = document.getElementById("searchBarNum");
